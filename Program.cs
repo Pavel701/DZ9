@@ -1,48 +1,48 @@
-﻿// class Program
-// {
-//     static void Main(string[] args)
-//     {
-//         int m = 1;
-//         int n = 5;
+﻿class Program
+{
+    static void Main(string[] args)
+    {
+        int m = 1;
+        int n = 5;
 
-//         PrintNumbers(m, n);
-//     }
+        PrintNumbers(m, n);
+    }
 
-//     static void PrintNumbers(int m, int n)
-//     {
-//         if (m <= n)
-//         {
-//             Console.Write(m + " ");
-//             PrintNumbers(m + 1, n);
-//         }
-//     }
-// }
+    static void PrintNumbers(int m, int n)
+    {
+        if (m <= n)
+        {
+            Console.Write(m + " ");
+            PrintNumbers(m + 1, n);
+        }
+    }
+}
 
 //////////////////////////////////////////////////////////////////////////////
 
-// class Program
-// {
-//     static void Main(string[] args)
-//     {
-//         int m = 1;
-//         int n = 15;
+class Program
+{
+    static void Main(string[] args)
+    {
+        int m = 1;
+        int n = 15;
 
-//         int sum = SumNumbers(m, n); 
-//         Console.WriteLine($"Сумма чисел от {m} до {n} равна {sum}"); 
+        int sum = SumNumbers(m, n); 
+        Console.WriteLine($"Сумма чисел от {m} до {n} равна {sum}"); 
 
-//     static int SumNumbers(int m, int n)
-//     {
-//         if (m > n) 
-//         {
-//             return 0;
-//         }
-//         else 
-//         {
-//             int sum = SumNumbers(m + 1, n) + m;
-//             return sum;
-//         }
-//     }
-// }
+    static int SumNumbers(int m, int n)
+    {
+        if (m > n) 
+        {
+            return 0;
+        }
+        else 
+        {
+            int sum = SumNumbers(m + 1, n) + m;
+            return sum;
+        }
+    }
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
