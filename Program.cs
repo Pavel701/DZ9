@@ -2,18 +2,19 @@
 // {
 //     static void Main(string[] args)
 //     {
-//         Console.Write("Введите M: ");
-//         int m = int.Parse(Console.ReadLine());
+//         int m = 1;
+//         int n = 5;
 
-//         Console.Write("Введите N: ");
-//         int n = int.Parse(Console.ReadLine());
+//         PrintNumbers(m, n);
+//     }
 
-//         for (int i = m; i <= n; i++)
+//     static void PrintNumbers(int m, int n)
+//     {
+//         if (m <= n)
 //         {
-//             Console.WriteLine(i);
+//             Console.Write(m + " ");
+//             PrintNumbers(m + 1, n);
 //         }
-
-//         Console.ReadLine();
 //     }
 // }
 
@@ -23,56 +24,46 @@
 // {
 //     static void Main(string[] args)
 //     {
-//         Console.Write("Введите M: ");
-//         int m = int.Parse(Console.ReadLine());
+//         int m = 1;
+//         int n = 15;
 
-//         Console.Write("Введите N: ");
-//         int n = int.Parse(Console.ReadLine());
+//         int sum = SumNumbers(m, n); 
+//         Console.WriteLine($"Сумма чисел от {m} до {n} равна {sum}"); 
 
-//         int sum = 0;
-//         for (int i = m; i <= n; i++)
+//     static int SumNumbers(int m, int n)
+//     {
+//         if (m > n) 
 //         {
-//             sum += i;
+//             return 0;
 //         }
-
-//         Console.WriteLine($"Сумма натуральных элементов от {m} до {n} равна {sum}");
-
-//         Console.ReadLine();
+//         else 
+//         {
+//             int sum = SumNumbers(m + 1, n) + m;
+//             return sum;
+//         }
 //     }
 // }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+using System;
 
 class Program
 {
     static int Ackermann(int m, int n)
     {
         if (m == 0)
-        {
             return n + 1;
-        }
         else if (n == 0)
-        {
             return Ackermann(m - 1, 1);
-        }
         else
-        {
             return Ackermann(m - 1, Ackermann(m, n - 1));
-        }
     }
 
     static void Main(string[] args)
     {
-        Console.Write("Введите m: ");
-        int m = int.Parse(Console.ReadLine());
-
-        Console.Write("Введите n: ");
-        int n = int.Parse(Console.ReadLine());
-
-        int result = Ackermann(m, n);
-
-        Console.WriteLine($"Результат функции Аккермана для m={m} и n={n} равен {result}");
-
-        Console.ReadLine();
+        Console.WriteLine(Ackermann(2, 3));
     }
 }
+
